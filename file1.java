@@ -43,8 +43,20 @@ static Node insert(Node root, int key)
 }  
 static void Inorder(Node root)  
 {  
+    if(root==null)
+    return;
+ else
+  {
+   Inorder(root.left);
+System.out.println(root.key+" ");
+ Inorder(root.right);
+  
+   
+   }
+
+}
     
-}  
+ 
 
 static void PostOrder(Node root)
 {
@@ -69,7 +81,7 @@ public static void main(String args[])
     insert(root, 60);  
     insert(root, 80);  
     
-  
+  Inorder(root);
     
 }  
 } 
